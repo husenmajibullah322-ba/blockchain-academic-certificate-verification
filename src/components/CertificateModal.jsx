@@ -117,7 +117,7 @@ export default function CertificateModal({ certificate, onClose }) {
               <div className="diploma-header">
                 <div className="diploma-crest diploma-iu-crest">
                   <img 
-                    src="/integral_university_logo.jpg" 
+                    src="./integral_university_logo.jpg" 
                     alt="Emblem" 
                     className="diploma-logo-img" 
                   />
@@ -244,7 +244,7 @@ export default function CertificateModal({ certificate, onClose }) {
               <div className="phone-university-header">
                 <div className="ju-crest-logo">
                   <img 
-                    src="/integral_university_logo.jpg" 
+                    src="./integral_university_logo.jpg" 
                     alt="Emblem" 
                     className="crest-img" 
                   />

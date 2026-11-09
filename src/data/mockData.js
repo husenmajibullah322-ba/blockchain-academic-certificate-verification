@@ -8,7 +8,7 @@ export const INITIAL_ADMINS = [
     institution: "Integral University, Lucknow",
     nodeId: "NODE-IU-LKO-01-PRIMARY",
     publicKey: "0x4F8a1B92348C3d71EfB24888C90a1E7b420fAA21",
-    logo: "/integral_university_logo.jpg"
+    logo: "./integral_university_logo.jpg"
   },
   {
     id: "admin-2",
@@ -19,7 +19,7 @@ export const INITIAL_ADMINS = [
     institution: "Integral University, Lucknow",
     nodeId: "NODE-IU-LKO-02-PEER",
     publicKey: "0x89C71eF38B2189a0B29E30A124976cB4612809f1",
-    logo: "/integral_university_logo.jpg"
+    logo: "./integral_university_logo.jpg"
   }
 ];
 

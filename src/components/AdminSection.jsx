@@ -26,7 +26,7 @@ export default function AdminSection({
         <div className="institution-brand-col">
           <div className="institution-logo-frame">
             <img 
-              src="/integral_university_logo.jpg" 
+              src="./integral_university_logo.jpg" 
               alt="Integral University Emblem" 
               className="institution-main-logo"
             />

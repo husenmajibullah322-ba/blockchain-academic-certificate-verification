@@ -81,7 +81,7 @@ export default function Sidebar({
         <div className="brand-logo-wrapper" onClick={() => setActiveSection('home')} role="button" tabIndex={0}>
           <div className="brand-icon-box">
             <img 
-              src="/integral_university_logo.jpg" 
+              src="./integral_university_logo.jpg" 
               alt="Integral University Emblem" 
               className="brand-logo-img" 
             />
