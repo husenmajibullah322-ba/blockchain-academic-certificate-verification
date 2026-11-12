@@ -1,4 +1,4 @@
-﻿# CertLedger: Blockchain-Based Academic Certificate Verification System
+# CertLedger: Blockchain-Based Academic Certificate Verification System
 
 <div align="center">
 
