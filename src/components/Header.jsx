@@ -85,7 +85,7 @@ export default function Header({
           <div className="header-badge-row">
             <span className="header-section-badge">{currentInfo.badge}</span>
             <span className="header-status-dot"></span>
-            <span className="header-network-text">PCS26140 Testnet</span>
+            <span className="header-network-text"> Testnet</span>
           </div>
           <h1 className="header-title">{currentInfo.title}</h1>
           <p className="header-subtitle">{currentInfo.subtitle}</p>
@@ -93,14 +93,12 @@ export default function Header({
       </div>
 
       <div className="header-right">
-        {/* Live Block Height Pill */}
         <div className="header-stat-pill" title="Current Blockchain Block Height">
-          <Cpu size={15} className="pill-icon text-cyan" />
+          <Cpu size={15} className="pill-icon" />
           <span className="pill-label">Block:</span>
           <span className="pill-val mono-font">#{blockHeight}</span>
         </div>
 
-        {/* Action Button: Issue Certificate */}
         {activeSection !== 'add-certificate' && (
           <button 
             type="button"
@@ -112,7 +110,6 @@ export default function Header({
           </button>
         )}
 
-        {/* Action Button: Verify */}
         {activeSection !== 'verified' && activeSection !== 'home' && (
           <button 
             type="button"
@@ -124,7 +121,6 @@ export default function Header({
           </button>
         )}
 
-        {/* Quick Theme Switcher Icon */}
         <button 
           type="button"
           className="header-theme-btn"
@@ -135,7 +131,6 @@ export default function Header({
           {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
         </button>
 
-        {/* User Account / Sign In */}
         {currentUser ? (
           <div className="header-user-badge" onClick={() => setActiveSection('admin')} role="button" tabIndex={0}>
             <span className="admin-status-dot"></span>

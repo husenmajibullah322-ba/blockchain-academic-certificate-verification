@@ -23,7 +23,6 @@ export default function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  // Modern Theme Engine: Dark / Light with localStorage persistence
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('certledger_theme') || 'dark';
   });
@@ -148,7 +147,6 @@ export default function App() {
 
   return (
     <div className={`app-layout ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
-      {/* Toast Notification */}
       {systemToast && (
         <div className={`system-toast ${systemToast.type}`}>
           <div className="toast-dot"></div>
@@ -156,7 +154,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Mobile Backdrop */}
       {mobileNavOpen && (
         <div 
           className="mobile-backdrop" 

@@ -45,15 +45,12 @@ export default function CertificateModal({ certificate, onClose }) {
   return (
     <div className="modal-overlay certificate-modal-overlay" onClick={onClose}>
       <div className="modal-container certificate-modal-container" onClick={e => e.stopPropagation()}>
-        
-        {/* Modal Toolbar */}
         <div className="certificate-modal-toolbar no-print">
           <div className="toolbar-left">
             <ShieldCheck size={20} className="text-emerald" />
             <span className="toolbar-title">Verified Credential #{certificate.id}</span>
           </div>
 
-          {/* View Format Selector */}
           <div className="toolbar-center-toggle">
             <button 
               type="button"
@@ -105,8 +102,8 @@ export default function CertificateModal({ certificate, onClose }) {
           </div>
         </div>
 
-        {/* VIEW MODE 1: Official Parchment Diploma Paper */}
-        {viewMode === 'parchment' ? (
+        <div className="certificate-modal-scroll-area">
+          {viewMode === 'parchment' ? (
           <div className="diploma-paper" id="printable-certificate">
             <div className="diploma-inner-border">
               <div className="corner-ornament top-left"></div>
@@ -175,7 +172,6 @@ export default function CertificateModal({ certificate, onClose }) {
                 </div>
               </div>
 
-              {/* Cryptographic Bottom Strip */}
               <div className="blockchain-cryptographic-strip">
                 <div className="strip-qr-box">
                   <svg viewBox="0 0 100 100" width="68" height="68" className="qr-svg">
@@ -226,21 +222,18 @@ export default function CertificateModal({ certificate, onClose }) {
             </div>
           </div>
         ) : (
-          /* VIEW MODE 2: Modern Mobile Digital Credential Format */
           <div className="mobile-modal-view-wrapper" id="printable-certificate">
             <div className="standalone-phone-card">
-              {/* Phone Header Bar */}
               <div className="phone-top-bar">
                 <button type="button" className="phone-nav-btn" onClick={onClose}>
-                  <ArrowLeft size={18} strokeWidth={2.4} color="#3b82f6" />
+                  <ArrowLeft size={18} strokeWidth={2} />
                 </button>
                 <span className="phone-nav-title">Digital Credential</span>
                 <button type="button" className="phone-nav-btn" onClick={handleShare}>
-                  <Share2 size={17} strokeWidth={2.4} color="#3b82f6" />
+                  <Share2 size={17} strokeWidth={2} />
                 </button>
               </div>
 
-              {/* Institution Header */}
               <div className="phone-university-header">
                 <div className="ju-crest-logo">
                   <img 
@@ -255,7 +248,6 @@ export default function CertificateModal({ certificate, onClose }) {
                 </div>
               </div>
 
-              {/* Title Block */}
               <div className="phone-cert-title-block">
                 <h3 className="phone-cert-word">CERTIFICATE</h3>
                 <div className="phone-cert-signature-name">
@@ -263,7 +255,6 @@ export default function CertificateModal({ certificate, onClose }) {
                 </div>
               </div>
 
-              {/* Certificate Detailed Body */}
               <div className="standalone-cert-details">
                 <div className="standalone-conferral-text">
                   This is to certify that
@@ -278,7 +269,7 @@ export default function CertificateModal({ certificate, onClose }) {
                 <div className="standalone-meta-grid">
                   <div className="sm-meta-item">
                     <span className="sm-label">Certificate ID:</span>
-                    <span className="sm-val mono-font text-teal">{certificate.id}</span>
+                    <span className="sm-val mono-font">{certificate.id}</span>
                   </div>
                   <div className="sm-meta-item">
                     <span className="sm-label">Student Roll:</span>
@@ -294,10 +285,9 @@ export default function CertificateModal({ certificate, onClose }) {
                   </div>
                 </div>
 
-                {/* Cryptographic Proof Card inside mobile frame */}
                 <div className="standalone-crypto-card">
                   <div className="crypto-badge-header">
-                    <ShieldCheck size={15} color="#059669" />
+                    <ShieldCheck size={15} className="text-emerald" />
                     <span>Cryptographic Blockchain Seal</span>
                   </div>
                   <div className="crypto-hash-text mono-font">
@@ -309,7 +299,6 @@ export default function CertificateModal({ certificate, onClose }) {
                   </div>
                 </div>
 
-                {/* Floating QR Code in Mobile View */}
                 <div className="standalone-qr-center">
                   <svg viewBox="0 0 100 100" width="80" height="80" className="qr-svg-mockup">
                     <rect width="100" height="100" fill="#ffffff" rx="8" />
@@ -346,7 +335,6 @@ export default function CertificateModal({ certificate, onClose }) {
                 </div>
               </div>
 
-              {/* Bottom Dock Bar */}
               <div className="phone-bottom-dock">
                 <button type="button" className="phone-dock-item active" onClick={onClose}>
                   <Home size={16} />
@@ -357,6 +345,7 @@ export default function CertificateModal({ certificate, onClose }) {
             </div>
           </div>
         )}
+        </div>
 
       </div>
     </div>

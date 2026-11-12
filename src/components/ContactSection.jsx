@@ -52,8 +52,8 @@ export default function ContactSection() {
     <div className="section-container contact-section">
       <div className="section-header-banner">
         <div className="banner-left">
-          <div className="banner-icon-box bg-purple-dim">
-            <Mail className="text-purple" size={26} />
+          <div className="banner-icon-box">
+            <Mail size={24} />
           </div>
           <div>
             <h2 className="banner-title">Consortium Support & Knowledge Base</h2>
@@ -65,7 +65,6 @@ export default function ContactSection() {
       </div>
 
       <div className="contact-grid">
-        {/* Contact Form Card */}
         <div className="panel-box contact-form-card">
           <h3 className="panel-title mb-4">Send an Official Inquiry</h3>
 
@@ -162,7 +161,6 @@ export default function ContactSection() {
           )}
         </div>
 
-        {/* FAQs and Info Column */}
         <div className="contact-info-col">
           <div className="panel-box faq-panel">
             <h3 className="panel-title mb-3">Frequently Asked Questions</h3>

@@ -78,7 +78,10 @@ export default function VerifiedSection({
 
   useEffect(() => {
     if (initialSearchQuery) {
-      handleLiveVerify(initialSearchQuery);
+      const timer = setTimeout(() => {
+        handleLiveVerify(initialSearchQuery);
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [initialSearchQuery, handleLiveVerify]);
 
@@ -97,11 +100,10 @@ export default function VerifiedSection({
 
   return (
     <div className="section-container verified-section">
-      {/* Banner */}
       <div className="section-header-banner">
         <div className="banner-left">
-          <div className="banner-icon-box bg-emerald-dim">
-            <CheckCircle2 className="text-emerald" size={26} />
+          <div className="banner-icon-box">
+            <CheckCircle2 className="text-emerald" size={24} />
           </div>
           <div>
             <h2 className="banner-title">Verified Public Ledger</h2>
@@ -113,13 +115,12 @@ export default function VerifiedSection({
 
         <div className="banner-right-actions">
           <div className="ledger-stat-tag">
-            <Layers size={15} className="text-emerald" />
+            <Layers size={15} />
             <span>{verifiedCertificates.length} Records Anchored</span>
           </div>
         </div>
       </div>
 
-      {/* Verifier Box Panel */}
       <div className="verifier-box-panel">
         <div className="verifier-box-header">
           <div className="verifier-header-title">
@@ -218,7 +219,7 @@ export default function VerifiedSection({
                   </div>
                   <div className="verified-detail-item">
                     <span className="detail-label">Roll / Enrollment ID:</span>
-                    <span className="detail-val mono-font text-cyan">{verificationResult.certificate.studentId}</span>
+                    <span className="detail-val mono-font">{verificationResult.certificate.studentId}</span>
                   </div>
                   <div className="verified-detail-item">
                     <span className="detail-label">Degree & Major:</span>
@@ -230,7 +231,7 @@ export default function VerifiedSection({
                   </div>
                   <div className="verified-detail-item">
                     <span className="detail-label">Block Height:</span>
-                    <span className="detail-val mono-font text-cyan">Block #{verificationResult.certificate.blockHeight}</span>
+                    <span className="detail-val mono-font">Block #{verificationResult.certificate.blockHeight}</span>
                   </div>
                   <div className="verified-detail-item">
                     <span className="detail-label">Audit Timestamp:</span>
@@ -240,7 +241,7 @@ export default function VerifiedSection({
 
                 <div className="hash-integrity-box">
                   <div className="integrity-header">
-                    <Lock size={14} className="text-cyan" />
+                    <Lock size={14} />
                     <span>Cryptographic Digest Check: <strong>PASSED (SHA-256 MATCH)</strong></span>
                   </div>
                   <div className="hash-code mono-font">{verificationResult.certificate.certificateHash}</div>
@@ -272,7 +273,6 @@ export default function VerifiedSection({
         )}
       </div>
 
-      {/* Registry Table Panel */}
       <div className="panel-box">
         <div className="panel-header">
           <div>

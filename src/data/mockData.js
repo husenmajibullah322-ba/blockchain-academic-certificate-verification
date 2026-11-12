@@ -173,7 +173,7 @@ export function loadStoredData(key, fallback) {
       return parsed;
     }
     return fallback;
-  } catch (e) {
+  } catch {
     return fallback;
   }
 }
@@ -181,6 +181,6 @@ export function loadStoredData(key, fallback) {
 export function saveStoredData(key, data) {
   try {
     localStorage.setItem(`pcs26140_ju_v1_${key}`, JSON.stringify(data));
-  } catch (e) {
+  } catch {
   }
 }

@@ -106,7 +106,7 @@ export default function AuthModal({
 
         <div className="auth-header">
           <div className="auth-icon-wrap">
-            <ShieldCheck size={26} className="text-cyan" />
+            <ShieldCheck size={24} />
           </div>
           <h2 className="auth-title">
             {mode === 'login' ? 'Institutional Sign In' : 'Register Validator Node'}
@@ -118,7 +118,6 @@ export default function AuthModal({
           </p>
         </div>
 
-        {/* Tab switch */}
         <div className="auth-tab-switch">
           <button 
             type="button"

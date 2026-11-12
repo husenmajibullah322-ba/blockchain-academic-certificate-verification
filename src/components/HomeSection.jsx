@@ -43,7 +43,6 @@ export default function HomeSection({
     setAuditResult(null);
 
     setTimeout(async () => {
-      // Special demo for tampered certificate
       if (q.toLowerCase() === 'tampered' || q.toLowerCase().includes('altered')) {
         setAuditResult({
           status: 'tampered',
@@ -58,7 +57,6 @@ export default function HomeSection({
         return;
       }
 
-      // Look up in verified certificates
       const found = verifiedCertificates.find(c => 
         c.id.toLowerCase() === q.toLowerCase() ||
         c.studentId.toLowerCase() === q.toLowerCase() ||
@@ -91,7 +89,6 @@ export default function HomeSection({
           });
         }
       } else {
-        // Look up in pending certificates
         const pendingFound = pendingCertificates.find(c => 
           c.id.toLowerCase() === q.toLowerCase() ||
           c.studentId.toLowerCase() === q.toLowerCase() ||
@@ -129,7 +126,6 @@ export default function HomeSection({
 
   return (
     <div className="section-container home-section">
-      {/* Hero Verifier Card */}
       <section className="home-hero-card">
         <div className="hero-top-badge">
           <span className="live-pulse-dot"></span>
@@ -148,7 +144,6 @@ export default function HomeSection({
           Anchored permanently to the consortium ledger with SHA-256 integrity and multi-signature proof.
         </p>
 
-        {/* Live Interactive Verification Terminal */}
         <div className="hero-verifier-terminal">
           <div className="terminal-header">
             <div className="terminal-title">
@@ -194,7 +189,6 @@ export default function HomeSection({
             </button>
           </form>
 
-          {/* Quick interactive sample chips */}
           <div className="terminal-sample-chips">
             <span className="chips-label">Try instant demo:</span>
             <button 
@@ -228,11 +222,10 @@ export default function HomeSection({
               title="Demonstrates how blockchain detects altered transcripts"
             >
               <AlertTriangle size={13} className="text-danger" />
-              <span>🚨 Simulate Tampered Document</span>
+              <span>Simulate Tampered Document</span>
             </button>
           </div>
 
-          {/* Audit Result Display */}
           {auditResult && (
             <div className={`audit-result-banner ${auditResult.status}`}>
               {auditResult.status === 'verified' && (
@@ -404,11 +397,10 @@ export default function HomeSection({
         </div>
       </section>
 
-      {/* Live Blockchain Telemetry Counter */}
       <section className="live-telemetry-grid">
         <div className="telemetry-card">
-          <div className="telemetry-icon-box cyan-glow">
-            <Cpu size={22} className="text-cyan" />
+          <div className="telemetry-icon-box">
+            <Cpu size={20} />
           </div>
           <div className="telemetry-info">
             <span className="telemetry-label">Current Block Height</span>
@@ -418,8 +410,8 @@ export default function HomeSection({
         </div>
 
         <div className="telemetry-card">
-          <div className="telemetry-icon-box emerald-glow">
-            <CheckCircle2 size={22} className="text-emerald" />
+          <div className="telemetry-icon-box">
+            <CheckCircle2 size={20} className="text-emerald" />
           </div>
           <div className="telemetry-info">
             <span className="telemetry-label">Verified Credentials</span>
@@ -429,8 +421,8 @@ export default function HomeSection({
         </div>
 
         <div className="telemetry-card">
-          <div className="telemetry-icon-box indigo-glow">
-            <Building2 size={22} className="text-indigo" />
+          <div className="telemetry-icon-box">
+            <Building2 size={20} />
           </div>
           <div className="telemetry-info">
             <span className="telemetry-label">Validator Nodes</span>
@@ -440,8 +432,8 @@ export default function HomeSection({
         </div>
 
         <div className="telemetry-card">
-          <div className="telemetry-icon-box purple-glow">
-            <ShieldCheck size={22} className="text-purple" />
+          <div className="telemetry-icon-box">
+            <ShieldCheck size={20} />
           </div>
           <div className="telemetry-info">
             <span className="telemetry-label">Tamper Resistance</span>
@@ -451,7 +443,6 @@ export default function HomeSection({
         </div>
       </section>
 
-      {/* Interactive 4-Step Trust Protocol ("How CertLedger Works") */}
       <section className="protocol-showcase-box">
         <div className="section-head-centered">
           <span className="section-mini-badge">ARCHITECTURE & PROTOCOL</span>
@@ -465,7 +456,7 @@ export default function HomeSection({
           <div className="step-card">
             <div className="step-num-badge">01</div>
             <div className="step-icon-frame">
-              <FilePlus2 size={22} className="text-cyan" />
+              <FilePlus2 size={20} />
             </div>
             <h3 className="step-title">Canonical Issuance</h3>
             <p className="step-desc">
@@ -477,7 +468,7 @@ export default function HomeSection({
           <div className="step-card">
             <div className="step-num-badge">02</div>
             <div className="step-icon-frame">
-              <Lock size={22} className="text-indigo" />
+              <Lock size={20} />
             </div>
             <h3 className="step-title">SHA-256 Digest</h3>
             <p className="step-desc">
@@ -489,7 +480,7 @@ export default function HomeSection({
           <div className="step-card">
             <div className="step-num-badge">03</div>
             <div className="step-icon-frame">
-              <Layers size={22} className="text-purple" />
+              <Layers size={20} />
             </div>
             <h3 className="step-title">Multi-Sig Consensus</h3>
             <p className="step-desc">
@@ -512,7 +503,6 @@ export default function HomeSection({
         </div>
       </section>
 
-      {/* Recent Verified Certificates Section */}
       <section className="recent-certs-section">
         <div className="section-header-flex">
           <div>
@@ -574,7 +564,6 @@ export default function HomeSection({
         </div>
       </section>
 
-      {/* Registrar & University Action Callout */}
       <section className="institution-callout-banner">
         <div className="callout-left">
           <div className="callout-icon-frame">

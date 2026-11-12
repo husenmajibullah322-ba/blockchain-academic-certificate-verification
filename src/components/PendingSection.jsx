@@ -43,8 +43,8 @@ export default function PendingSection({
     <div className="section-container pending-section">
       <div className="section-header-banner">
         <div className="banner-left">
-          <div className="banner-icon-box bg-amber-dim">
-            <Clock className="text-amber" size={26} />
+          <div className="banner-icon-box">
+            <Clock className="text-amber" size={24} />
           </div>
           <div>
             <h2 className="banner-title">Consensus Validation Queue</h2>
@@ -56,7 +56,7 @@ export default function PendingSection({
 
         <div className="banner-right-actions">
           <div className="consensus-badge">
-            <Cpu size={15} className="text-cyan" />
+            <Cpu size={15} />
             <span>Rule: 1/1 PoA Approval Required</span>
           </div>
         </div>
@@ -180,7 +180,6 @@ export default function PendingSection({
         </div>
       )}
 
-      {/* Inspect Modal */}
       {inspectModalCert && (
         <div className="modal-overlay" onClick={() => setInspectModalCert(null)}>
           <div className="modal-container inspect-modal" onClick={e => e.stopPropagation()}>

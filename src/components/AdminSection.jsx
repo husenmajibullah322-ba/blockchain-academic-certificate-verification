@@ -21,7 +21,6 @@ export default function AdminSection({
 }) {
   return (
     <div className="section-container admin-section">
-      {/* University Institutional Banner */}
       <div className="university-institution-banner">
         <div className="institution-brand-col">
           <div className="institution-logo-frame">
@@ -83,7 +82,6 @@ export default function AdminSection({
         </div>
       </div>
 
-      {/* Admin Action Stats */}
       <div className="admin-quick-stats-grid">
         <div className="admin-stat-card" onClick={() => setActiveSection('verified')} role="button" tabIndex={0}>
           <div className="stat-icon-wrap emerald">
@@ -116,8 +114,8 @@ export default function AdminSection({
         </div>
 
         <div className="admin-stat-card">
-          <div className="stat-icon-wrap purple">
-            <Users size={22} className="text-purple" />
+          <div className="stat-icon-wrap">
+            <Users size={20} />
           </div>
           <div className="stat-text-block">
             <span className="s-val mono-font">{adminsList.length}</span>
@@ -126,7 +124,6 @@ export default function AdminSection({
         </div>
       </div>
 
-      {/* Authorized Node Signers Table */}
       <div className="panel-box">
         <div className="panel-header">
           <div>
@@ -167,7 +164,6 @@ export default function AdminSection({
         </div>
       </div>
 
-      {/* Smart Contract Architecture & Parameters */}
       <div className="panel-box contract-rules-panel">
         <div className="panel-header">
           <div>

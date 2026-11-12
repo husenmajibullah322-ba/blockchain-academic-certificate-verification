@@ -141,8 +141,8 @@ export default function AddCertificateSection({
     <div className="section-container add-certificate-section">
       <div className="section-header-banner">
         <div className="banner-left">
-          <div className="banner-icon-box bg-indigo-dim">
-            <FilePlus2 className="text-indigo" size={26} />
+          <div className="banner-icon-box">
+            <FilePlus2 size={24} />
           </div>
           <div>
             <h2 className="banner-title">Issue New Academic Certificate</h2>
@@ -353,7 +353,6 @@ export default function AddCertificateSection({
           </form>
         </div>
 
-        {/* Cryptographic Result & Receipt */}
         <div className="crypto-result-container">
           {cryptoResult ? (
             <div className="crypto-message-card">
@@ -372,7 +371,7 @@ export default function AddCertificateSection({
 
               <div className="crypto-field-box">
                 <span className="crypto-field-label">Assigned Certificate ID:</span>
-                <div className="crypto-field-value mono-font text-indigo">
+                <div className="crypto-field-value mono-font">
                   {cryptoResult.id}
                 </div>
               </div>
@@ -487,7 +486,7 @@ export default function AddCertificateSection({
           ) : (
             <div className="crypto-placeholder-box">
               <div className="placeholder-icon-wrap">
-                <Lock size={36} className="text-indigo" />
+                <Lock size={32} />
               </div>
               <h3>Live Cryptographic Proof Preview</h3>
               <p>

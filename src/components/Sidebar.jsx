@@ -76,7 +76,6 @@ export default function Sidebar({
 
   return (
     <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''} ${mobileNavOpen ? 'mobile-open' : ''}`}>
-      {/* Brand Header */}
       <div className="sidebar-brand">
         <div className="brand-logo-wrapper" onClick={() => setActiveSection('home')} role="button" tabIndex={0}>
           <div className="brand-icon-box">
@@ -97,7 +96,6 @@ export default function Sidebar({
           )}
         </div>
 
-        {/* Mobile close button */}
         {mobileNavOpen && (
           <button 
             type="button" 
@@ -109,7 +107,6 @@ export default function Sidebar({
           </button>
         )}
 
-        {/* Desktop collapse button */}
         {!mobileNavOpen && (
           <button 
             type="button"
@@ -123,7 +120,6 @@ export default function Sidebar({
         )}
       </div>
 
-      {/* Network Pulse Pill */}
       {!isCollapsed && (
         <div className="network-status-card">
           <div className="pulse-indicator">
@@ -138,7 +134,6 @@ export default function Sidebar({
         </div>
       )}
 
-      {/* Navigation List */}
       <nav className="sidebar-nav">
         <div className="nav-group-title">
           {!isCollapsed ? 'NAVIGATION' : '•••'}
@@ -174,7 +169,6 @@ export default function Sidebar({
         </ul>
       </nav>
 
-      {/* Theme Switcher Bar */}
       <div className="sidebar-theme-row">
         <button 
           type="button"
@@ -196,7 +190,6 @@ export default function Sidebar({
         </button>
       </div>
 
-      {/* Auth & Profile Footer */}
       <div className="sidebar-auth-footer">
         {currentUser ? (
           <div className="user-profile-box">
