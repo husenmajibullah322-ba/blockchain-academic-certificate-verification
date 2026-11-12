@@ -120,7 +120,7 @@ export default function CertificateModal({ certificate, onClose }) {
                   />
                 </div>
                 <h1 className="diploma-university">{certificate.institution || 'Integral University, Lucknow'}</h1>
-                <div className="diploma-tagline">ACCREDITED ACADEMIC INSTITUTION • PCS26140 BLOCKCHAIN CONSORTIUM</div>
+                <div className="diploma-tagline">ACCREDITED ACADEMIC INSTITUTION • CERTLEDGER BLOCKCHAIN CONSORTIUM</div>
                 <div className="diploma-rule"></div>
               </div>
 
@@ -206,7 +206,7 @@ export default function CertificateModal({ certificate, onClose }) {
                 <div className="strip-info-box">
                   <div className="strip-title-row">
                     <Lock size={12} className="text-emerald" />
-                    <span>IMMUTABLE PCS26140 BLOCKCHAIN PROOF OF CONFERRAL</span>
+                    <span>IMMUTABLE PROOF-OF-AUTHORITY LEDGER CONFERRAL RECORD</span>
                   </div>
                   <div className="strip-hash-row">
                     <span className="strip-label">SHA-256 Hash:</span>
@@ -215,7 +215,7 @@ export default function CertificateModal({ certificate, onClose }) {
                   <div className="strip-meta-row">
                     <span>Block Height: <strong>#{certificate.blockHeight || 148201}</strong></span>
                     <span>TxHash: <strong>{certificate.transactionHash ? certificate.transactionHash.substring(0, 16) + '...' : '0x789bce91...'}</strong></span>
-                    <span>Standard: <strong>PCS-PoA-ERC721</strong></span>
+                    <span>Standard: <strong>ERC-721 Soulbound Token (SBT)</strong></span>
                   </div>
                 </div>
               </div>

@@ -60,7 +60,7 @@ export default function AdminSection({
               </div>
               <div className="v-stat">
                 <span className="v-label">Network:</span>
-                <span className="v-val text-cyan">PCS26140</span>
+                <span className="v-val">CertLedger PoA</span>
               </div>
             </div>
             {currentUser ? (
@@ -167,7 +167,7 @@ export default function AdminSection({
       <div className="panel-box contract-rules-panel">
         <div className="panel-header">
           <div>
-            <h3 className="panel-title">PCS26140 Smart Contract Governance</h3>
+            <h3 className="panel-title">CertLedger Smart Contract Governance</h3>
             <p className="panel-subtitle">Consensus specifications and cryptographic parameters</p>
           </div>
         </div>
@@ -175,11 +175,11 @@ export default function AdminSection({
         <div className="contract-specs-grid">
           <div className="spec-item">
             <span className="spec-label">Contract Standard:</span>
-            <span className="spec-val">PCS-PoA-ERC721 (Non-Fungible Academic Credential)</span>
+            <span className="spec-val">ERC-721 Soulbound Token (Non-Transferable Academic Credential)</span>
           </div>
           <div className="spec-item">
             <span className="spec-label">Smart Contract Address:</span>
-            <span className="spec-val mono-font text-cyan">0xPCS261407e3FaB91aC441097e88241F83cC87A14</span>
+            <span className="spec-val mono-font">0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692</span>
           </div>
           <div className="spec-item">
             <span className="spec-label">Hashing Algorithm:</span>

@@ -40,7 +40,7 @@ export async function generateBlockchainRecord(certificateData, previousBlockHas
   
   const digitalSignature = '0x' + generateRandomHex(64);
   const transactionHash = '0x' + generateRandomHex(32);
-  const contractAddress = '0xPCS261407e3FaB91aC441097e88241F83cC87A14';
+  const contractAddress = '0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692';
 
   return {
     certificateHash: '0x' + certificateHash,

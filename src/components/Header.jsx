@@ -82,11 +82,6 @@ export default function Header({
         </button>
 
         <div className="header-titles">
-          <div className="header-badge-row">
-            <span className="header-section-badge">{currentInfo.badge}</span>
-            <span className="header-status-dot"></span>
-            <span className="header-network-text"> Testnet</span>
-          </div>
           <h1 className="header-title">{currentInfo.title}</h1>
           <p className="header-subtitle">{currentInfo.subtitle}</p>
         </div>

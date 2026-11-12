@@ -674,48 +674,27 @@ body {
   padding: 4px;
 }
 
-.header-badge-row {
+.header-titles {
   display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 2px;
-}
-
-.header-section-badge {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 1px 6px;
-  border-radius: var(--radius-sm);
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
-}
-
-.header-status-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--text-dim);
-}
-
-.header-network-text {
-  font-size: 0.7rem;
-  color: var(--text-dim);
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
 }
 
 .header-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   color: var(--text-main);
-  line-height: 1.2;
+  line-height: 1.25;
+  margin: 0;
 }
 
 .header-subtitle {
   font-size: 0.75rem;
   color: var(--text-muted);
+  line-height: 1.3;
+  margin: 0;
   display: none; 
 }
 

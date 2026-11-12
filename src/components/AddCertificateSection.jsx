@@ -54,7 +54,7 @@ export default function AddCertificateSection({
 
   const generateNewCertId = () => {
     const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-    return `CERT-PCS26140-2026-${randomSuffix}`;
+    return `CERT-IU-2026-${randomSuffix}`;
   };
 
   const handleSubmit = async (e) => {

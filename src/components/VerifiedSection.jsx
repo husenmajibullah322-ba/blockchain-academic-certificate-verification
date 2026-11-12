@@ -62,7 +62,7 @@ export default function VerifiedSection({
           setVerificationResult({
             success: false,
             queriedTerm: q,
-            message: 'No matching academic credential found on PCS26140 ledger. Credential may be unissued, fraudulent, or modified.'
+            message: 'No matching academic credential found on the CertLedger blockchain. Credential may be unissued, fraudulent, or modified.'
           });
         }
       } catch (err) {
@@ -108,7 +108,7 @@ export default function VerifiedSection({
           <div>
             <h2 className="banner-title">Verified Public Ledger</h2>
             <p className="banner-subtitle">
-              Publicly verifiable, immutable academic records permanently anchored into the PCS26140 consortium blockchain.
+              Publicly verifiable, immutable academic records permanently anchored into the CertLedger consortium blockchain.
             </p>
           </div>
         </div>

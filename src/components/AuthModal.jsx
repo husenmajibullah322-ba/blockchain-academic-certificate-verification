@@ -83,7 +83,7 @@ export default function AuthModal({
       password: registerData.password,
       role: registerData.role,
       institution: registerData.institution.trim(),
-      nodeId: `NODE-PCS-${Math.floor(10 + Math.random() * 90)}-VALIDATOR`,
+      nodeId: `NODE-IU-${Math.floor(10 + Math.random() * 90)}-VALIDATOR`,
       publicKey: '0x' + generateRandomHex(20)
     };
 
@@ -114,7 +114,7 @@ export default function AuthModal({
           <p className="auth-subtitle">
             {mode === 'login' 
               ? 'Sign in to access official cryptographic keys and issue verified degrees'
-              : 'Onboard an accredited university validator node onto the PCS26140 consortium'}
+              : 'Onboard an accredited university validator node onto the CertLedger consortium'}
           </p>
         </div>
 

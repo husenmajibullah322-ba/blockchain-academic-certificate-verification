@@ -76,7 +76,7 @@ export default function HomeSection({
             computedHash,
             storedHash: found.certificateHash,
             isIntact,
-            message: 'Cryptographically authentic and permanently registered on the PCS26140 consortium ledger.'
+            message: 'Cryptographically authentic and permanently registered on the CertLedger consortium ledger.'
           });
         } catch {
           setAuditResult({
@@ -129,7 +129,7 @@ export default function HomeSection({
       <section className="home-hero-card">
         <div className="hero-top-badge">
           <span className="live-pulse-dot"></span>
-          <span>PCS26140 • Consortium Blockchain Academic Ledger</span>
+          <span>CertLedger • Consortium Blockchain Academic Ledger</span>
           <span className="badge-sep">•</span>
           <span className="badge-highlight">PoA Genesis Online</span>
         </div>
@@ -508,7 +508,7 @@ export default function HomeSection({
           <div>
             <h3 className="section-heading-sm">Recently Verified Academic Records</h3>
             <p className="section-sub-sm">
-              Live records permanently sealed on the PCS26140 consortium blockchain ledger.
+              Live records permanently sealed on the CertLedger consortium blockchain ledger.
             </p>
           </div>
           <button 

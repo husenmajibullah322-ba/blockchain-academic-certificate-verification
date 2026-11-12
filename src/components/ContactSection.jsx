@@ -27,14 +27,14 @@ export default function ContactSection() {
     },
     {
       q: "Can a university modify or revoke a certificate once it is on-chain?",
-      a: "The blockchain block itself is immutable and cannot be rewritten. However, the PCS26140 smart contract supports cryptographic revocation registries: if a degree was issued in error, the authorized university registrar issues a signed revocation transaction that marks the certificate ID as revoked while preserving the tamper-evident audit history."
+      a: "The blockchain block itself is immutable and cannot be rewritten. However, the CertLedger smart contract supports cryptographic revocation registries: if a degree was issued in error, the authorized university registrar issues a signed revocation transaction that marks the certificate ID as revoked while preserving the tamper-evident audit history."
     },
     {
       q: "Do employers or students need cryptocurrency or MetaMask to verify credentials?",
-      a: "No! The PCS26140 system is designed for frictionless real-world adoption. Employers, embassies, and universities can verify credentials directly through our web portal by scanning the certificate QR code or pasting the certificate hash without any gas fees, wallets, or crypto knowledge."
+      a: "No! The CertLedger system is designed for frictionless real-world adoption. Employers, embassies, and universities can verify credentials directly through our web portal by scanning the certificate QR code or pasting the certificate hash without any gas fees, wallets, or crypto knowledge."
     },
     {
-      q: "How can another university join the PCS26140 Consortium as a validator node?",
+      q: "How can another university join the CertLedger Consortium as a validator node?",
       a: "Accredited educational institutions can submit a node onboarding request using this contact portal. Once the consortium governance committee verifies institutional credentials, the university is provisioned a dedicated PoA validator node and private keypair to issue and validate credentials."
     }
   ];
@@ -58,7 +58,7 @@ export default function ContactSection() {
           <div>
             <h2 className="banner-title">Consortium Support & Knowledge Base</h2>
             <p className="banner-subtitle">
-              Get in touch with the PCS26140 Academic Verification Foundation, report fraudulent degrees, or request validator node onboarding.
+              Get in touch with the CertLedger Consortium Secretariat, report fraudulent degrees, or request validator node onboarding.
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function ContactSection() {
               </div>
               <h4>Message Successfully Dispatched</h4>
               <p>
-                Thank you for contacting the PCS26140 Consortium Secretariat. A ticket has been logged with cryptographic timestamp. 
+                Thank you for contacting the CertLedger Consortium Secretariat. A ticket has been logged with cryptographic timestamp. 
                 Our compliance team will respond within 24 business hours.
               </p>
               <button 

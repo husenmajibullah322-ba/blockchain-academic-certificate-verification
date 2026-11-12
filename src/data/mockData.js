@@ -41,7 +41,7 @@ export const SAMPLE_PGDIT_CERTIFICATE = {
   previousBlockHash: "0x0000abc1923847fedbca02938475610293847561029384756102938475610293",
   digitalSignature: "0x789bce91a2837461524387591823746192837461524387591823746192837461",
   transactionHash: "0x3918273645019283746591827364501928374659182736450192837465918273",
-  contractAddress: "0xPCS261407e3FaB91aC441097e88241F83cC87A14",
+  contractAddress: "0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692",
   blockHeight: 148200,
   status: "VERIFIED",
   verifiedAt: "2026-04-15T10:00:00Z",
@@ -51,7 +51,7 @@ export const SAMPLE_PGDIT_CERTIFICATE = {
 export const INITIAL_VERIFIED_CERTIFICATES = [
   SAMPLE_PGDIT_CERTIFICATE,
   {
-    id: "CERT-PCS26140-2026-1001",
+    id: "CERT-IU-2026-1001",
     studentName: "Mohd. Zaid Khan",
     studentId: "IU-2022-BCS-8901",
     course: "Bachelor of Technology",
@@ -67,14 +67,14 @@ export const INITIAL_VERIFIED_CERTIFICATES = [
     previousBlockHash: "0x0000000000000000000a3b89ef12c45d6789abcd0123456789abcdef01234567",
     digitalSignature: "0x51c4a91f893e430b192837465918237461928374619283746192837461928374",
     transactionHash: "0x789bce91a2837461524387591823746192837461524387591823746192837461",
-    contractAddress: "0xPCS261407e3FaB91aC441097e88241F83cC87A14",
+    contractAddress: "0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692",
     blockHeight: 148201,
     status: "VERIFIED",
     verifiedAt: "2026-05-20T10:15:00Z",
     signatoryNode: "NODE-IU-LKO-01-PRIMARY"
   },
   {
-    id: "CERT-PCS26140-2026-1002",
+    id: "CERT-IU-2026-1002",
     studentName: "Ayesha Siddiqui",
     studentId: "IU-2022-MCA-4412",
     course: "Master of Computer Applications",
@@ -90,14 +90,14 @@ export const INITIAL_VERIFIED_CERTIFICATES = [
     previousBlockHash: "0x0000abc1923847fedbca02938475610293847561029384756102938475610293",
     digitalSignature: "0x42f8901b23847561029384756102938475610293847561029384756102938475",
     transactionHash: "0x9182736450192837465918273645019283746591827364501928374659182736",
-    contractAddress: "0xPCS261407e3FaB91aC441097e88241F83cC87A14",
+    contractAddress: "0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692",
     blockHeight: 148202,
     status: "VERIFIED",
     verifiedAt: "2026-06-14T14:40:22Z",
     signatoryNode: "NODE-IU-LKO-01-PRIMARY"
   },
   {
-    id: "CERT-PCS26140-2026-1003",
+    id: "CERT-IU-2026-1003",
     studentName: "Farhan Alam",
     studentId: "IU-2021-BEE-3290",
     course: "Bachelor of Technology",
@@ -113,7 +113,7 @@ export const INITIAL_VERIFIED_CERTIFICATES = [
     previousBlockHash: "0x0000def829103847561029384756102938475610293847561029384756102938",
     digitalSignature: "0x6391827364501928374659182736450192837465918273645019283746591827",
     transactionHash: "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-    contractAddress: "0xPCS261407e3FaB91aC441097e88241F83cC87A14",
+    contractAddress: "0x71C8b422aC0a6A16B4f41995B9A6e7BfD83cD692",
     blockHeight: 148203,
     status: "VERIFIED",
     verifiedAt: "2026-07-02T09:12:45Z",
@@ -123,7 +123,7 @@ export const INITIAL_VERIFIED_CERTIFICATES = [
 
 export const INITIAL_PENDING_CERTIFICATES = [
   {
-    id: "CERT-PCS26140-2026-2001",
+    id: "CERT-IU-2026-2001",
     studentName: "Alina Fatima",
     studentId: "IU-2023-CS-7719",
     course: "Bachelor of Technology",
@@ -141,7 +141,7 @@ export const INITIAL_PENDING_CERTIFICATES = [
     submittedBy: "Prof. (Dr.) Haris M. Khan (admin@integral.edu.in)"
   },
   {
-    id: "CERT-PCS26140-2026-2002",
+    id: "CERT-IU-2026-2002",
     studentName: "Rehan Warsi",
     studentId: "IU-2022-DS-5108",
     course: "Master of Science",
@@ -162,7 +162,7 @@ export const INITIAL_PENDING_CERTIFICATES = [
 
 export function loadStoredData(key, fallback) {
   try {
-    const item = localStorage.getItem(`pcs26140_ju_v1_${key}`);
+    const item = localStorage.getItem(`certledger_v1_${key}`);
     if (item) {
       const parsed = JSON.parse(item);
       if (key === 'verified_certs' && Array.isArray(parsed)) {
@@ -180,7 +180,7 @@ export function loadStoredData(key, fallback) {
 
 export function saveStoredData(key, data) {
   try {
-    localStorage.setItem(`pcs26140_ju_v1_${key}`, JSON.stringify(data));
+    localStorage.setItem(`certledger_v1_${key}`, JSON.stringify(data));
   } catch {
   }
 }
